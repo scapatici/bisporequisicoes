@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:payflow/shared/themes/app_colors.dart';
-import 'package:payflow/shared/themes/app_text_styles.dart';
-import 'package:payflow/shared/widgets/boleto_list/boleto_list_widget.dart';
+import 'package:BispoRequisicoes/shared/themes/app_colors.dart';
+import 'package:BispoRequisicoes/shared/themes/app_text_styles.dart';
+import 'package:BispoRequisicoes/shared/widgets/boleto_list/boleto_list_widget.dart';
 
 class ExtractPage extends StatefulWidget {
   ExtractPage({Key? key}) : super(key: key);

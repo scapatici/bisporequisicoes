@@ -1,6 +1,6 @@
-# payflow
+# BispoRequisicoes
 
-A new Flutter project.
+Novo projeto em fluter para atender aos pedidos de requisições feitas pelos encarregados de setores da empresa Bispo Alimentos.
 
 ## Getting Started
 

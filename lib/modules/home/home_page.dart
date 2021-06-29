@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:payflow/modules/extract/extract_page.dart';
-import 'package:payflow/modules/home/home_controller.dart';
-import 'package:payflow/modules/meus_boletos/meus_boletos_page.dart';
-import 'package:payflow/shared/models/user_model.dart';
-import 'package:payflow/shared/themes/app_colors.dart';
-import 'package:payflow/shared/themes/app_text_styles.dart';
+import 'package:BispoRequisicoes/modules/extract/extract_page.dart';
+import 'package:BispoRequisicoes/modules/home/home_controller.dart';
+import 'package:BispoRequisicoes/modules/meus_boletos/meus_boletos_page.dart';
+import 'package:BispoRequisicoes/shared/models/user_model.dart';
+import 'package:BispoRequisicoes/shared/themes/app_colors.dart';
+import 'package:BispoRequisicoes/shared/themes/app_text_styles.dart';
 
 class HomePage extends StatefulWidget {
   final UserModel user;
@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
                     ]),
               ),
               subtitle: Text(
-                "Mantenha suas contas em dia",
+                "tenha um excelente dia!",
                 style: TextStyles.captionShape,
               ),
               trailing: Container(

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_masked_text2/flutter_masked_text2.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'package:payflow/modules/insert_boleto/insert_boleto_controller.dart';
-import 'package:payflow/shared/themes/app_colors.dart';
-import 'package:payflow/shared/themes/app_text_styles.dart';
-import 'package:payflow/shared/widgets/input_text/input_text_widget.dart';
-import 'package:payflow/shared/widgets/set_label_buttons/set_label_buttons.dart';
+import 'package:BispoRequisicoes/modules/insert_boleto/insert_boleto_controller.dart';
+import 'package:BispoRequisicoes/shared/themes/app_colors.dart';
+import 'package:BispoRequisicoes/shared/themes/app_text_styles.dart';
+import 'package:BispoRequisicoes/shared/widgets/input_text/input_text_widget.dart';
+import 'package:BispoRequisicoes/shared/widgets/set_label_buttons/set_label_buttons.dart';
 
 class InsertBoletoPage extends StatefulWidget {
   final String? barcode;
@@ -23,7 +23,7 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
   final controller = InsertBoletoController();
 
   final moneyInputTextController = MoneyMaskedTextController(
-      leftSymbol: "R\$", initialValue: 0, decimalSeparator: ",");
+      leftSymbol: "Qtd.:", initialValue: 0, decimalSeparator: ",");
   final vencimentoInputTextController =
       MaskedTextController(mask: "00/00/0000");
   final codigoInputTextController = TextEditingController();
@@ -57,7 +57,7 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 93, vertical: 24),
                 child: Text(
-                  "Preencha os dados do boleto",
+                  "Preencha os dados da requisição",
                   style: TextStyles.titleBoldHeading,
                   textAlign: TextAlign.center,
                 ),
@@ -67,7 +67,7 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
                 child: Column(
                   children: [
                     InputTextWidget(
-                      label: "Nome do boleto",
+                      label: "Requerer",
                       icon: Icons.description_outlined,
                       onChanged: (value) {
                         controller.onChange(name: value);
@@ -76,8 +76,8 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
                     ),
                     InputTextWidget(
                       controller: vencimentoInputTextController,
-                      label: "Vencimento",
-                      icon: FontAwesomeIcons.timesCircle,
+                      label: "Data",
+                      icon: FontAwesomeIcons.calendar,
                       onChanged: (value) {
                         controller.onChange(dueDate: value);
                       },
@@ -85,8 +85,8 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
                     ),
                     InputTextWidget(
                       controller: moneyInputTextController,
-                      label: "Valor",
-                      icon: FontAwesomeIcons.wallet,
+                      label: "Quantidade",
+                      icon: FontAwesomeIcons.shoppingBasket,
                       validator: (_) => controller
                           .validateValor(moneyInputTextController.numberValue),
                       onChanged: (value) {
@@ -97,7 +97,7 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
                     InputTextWidget(
                       controller: codigoInputTextController,
                       label: "Código",
-                      icon: FontAwesomeIcons.barcode,
+                      icon: FontAwesomeIcons.code,
                       validator: controller.validateCodigo,
                       onChanged: (value) {
                         controller.onChange(barcode: value);

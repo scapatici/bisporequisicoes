@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:payflow/shared/themes/app_colors.dart';
-import 'package:payflow/shared/themes/app_images.dart';
-import 'package:payflow/shared/themes/app_text_styles.dart';
+import 'package:BispoRequisicoes/shared/themes/app_colors.dart';
+import 'package:BispoRequisicoes/shared/themes/app_images.dart';
+import 'package:BispoRequisicoes/shared/themes/app_text_styles.dart';
 
 class SocialLoginButton extends StatelessWidget {
   final VoidCallback onTap;
@@ -28,7 +28,7 @@ class SocialLoginButton extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset(AppImages.google),
+                    //Image.asset(AppImages.person),
                     SizedBox(
                       width: 16,
                     ),
@@ -45,7 +45,7 @@ class SocialLoginButton extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Entrar com Google",
+                    "Entrar",
                     style: TextStyles.buttonGray,
                   ),
                 ],

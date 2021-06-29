@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:payflow/shared/models/boleto_model.dart';
-import 'package:payflow/shared/widgets/boleto_list/boleto_list_controller.dart';
-import 'package:payflow/shared/widgets/boleto_tile/boleto_tile_widget.dart';
+import 'package:BispoRequisicoes/shared/models/boleto_model.dart';
+import 'package:BispoRequisicoes/shared/widgets/boleto_list/boleto_list_controller.dart';
+import 'package:BispoRequisicoes/shared/widgets/boleto_tile/boleto_tile_widget.dart';
 
 class BoletoListWidget extends StatefulWidget {
   BoletoListWidget({Key? key}) : super(key: key);

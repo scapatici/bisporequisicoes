@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:payflow/shared/themes/app_colors.dart';
-import 'package:payflow/shared/widgets/divider/divider_widget.dart';
-import 'package:payflow/shared/widgets/label_button/label_button.dart';
+import 'package:BispoRequisicoes/shared/themes/app_colors.dart';
+import 'package:BispoRequisicoes/shared/widgets/divider/divider_widget.dart';
+import 'package:BispoRequisicoes/shared/widgets/label_button/label_button.dart';
 
 class SetLabelButtons extends StatelessWidget {
   final String labelPrimary;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:payflow/shared/models/boleto_model.dart';
-import 'package:payflow/shared/themes/app_text_styles.dart';
+import 'package:BispoRequisicoes/shared/models/boleto_model.dart';
+import 'package:BispoRequisicoes/shared/themes/app_text_styles.dart';
 
 class BoletoTileWidget extends StatelessWidget {
   final BoletoModel data;
@@ -17,15 +17,15 @@ class BoletoTileWidget extends StatelessWidget {
           style: TextStyles.titleListTile,
         ),
         subtitle: Text(
-          "Vence em ${data.dueDate}",
+          "Feita em ${data.dueDate}",
           style: TextStyles.captionBody,
         ),
         trailing: Text.rich(TextSpan(
-          text: "R\$ ",
+          text: "Qtd.: ", //"R\$ "
           style: TextStyles.trailingRegular,
           children: [
             TextSpan(
-              text: "${data.value!.toStringAsFixed(2)}",
+              text: "${data.value!.toStringAsFixed(0)}",
               style: TextStyles.trailingBold,
             ),
           ],
